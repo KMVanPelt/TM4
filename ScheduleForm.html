@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+
+<title>Schedule</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body>
+
+<form id="Schedule" method="POST" onsubmit="phpScheduleForm" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>
+
+ <fieldset>
+  <legend>Insert Event Information</legend>
+  <ul>
+    <li> Date: <input type="Date" name="Date" id="Date" tabindex="1" title="Date" pattern="Date" placeholder="Please enter the date of the Event" size="40" maxlength=20></li><br>
+    <li> Event Name: <input type="text" name="Event" id="Event" tabindex="2" title="Event" pattern="[a-zA-Z0-9]+" placeholder="Please enter the Event Name" size="40" maxlength=30 ></li><br>
+	<li> Venue Name: <input type="text" name="VenueName" id="VenueName" tabindex="3" title="VenueName" pattern="[a-zA-Z0-9]+" placeholder="Please enter Venue Name" size="40" maxlength=30></li><br>
+    <li> Venue Address: <input type="text" name="VenueAddress" id="VenueAddress" tabindex="4" title="VenueAddress" pattern="[a-zA-Z0-9]+" placeholder="Please enter the Venue Address" size="100" maxlength=100></li><br>
+    <li> Event Time: <input type="Time" name="Time" id="Time" tabindex="5" title="Time" pattern="Time" placeholder="Please enter the Event time" size="40" maxlength=10 ></li><br>
+	<li> Contact Name: <input type="text" name="ContactName" id="ContactName" tabindex="6" title="ContactName" pattern="[a-zA-Z]+" placeholder="Please enter the Event contact persons name" size="50" maxlength=30></li><br>
+    <li> Contact Phone Number: <input type="tel" name="ContactNumber" id="ContactNumber" tabindex="7" title="ContactNumber" pattern="[0-9]+" placeholder="Please enter contact persons phone number (0278242330)" size="60" maxlength=15></li>
+  </ul>
+    </form>
+	<br>
+  <input type="submit" value="Submit"><br>
+
+  </fieldset>
+
+
+
+</body>
+</html>

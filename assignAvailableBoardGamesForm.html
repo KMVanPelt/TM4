@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+
+<title>assignAvailableBoardGames</title>
+<link rel="stylesheet" type="text/css" href="C:\Users\theva\Desktop\Open Polytecnic\BIT695 Web Technologies\Part2\TM2\BIT695_TM2_4101578_Kelley_Van_Pelt\style.css">
+
+
+</head>
+
+<body>
+
+<form id="assignAvailableBoardGames" method="POST" onsubmit="phpAssignAvailableBoardGamesForm.php" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>
+
+ <fieldset>
+  <legend>Assign Available Board-Game(s) To Member</legend>
+  <ul>
+  <li> Member ID: <input type="text" name="memberID" id="memberID" tabindex="2" title="member ID number" pattern="[a-zA-Z0-9]+" placeholder="Please enter members ID number" size="50" maxlength=20></li><br>
+  <li> Select Available Board-Games: </li>
+	<select name="boardgame" id="boardgame" multiple="multiple">
+	<?php 
+	$sql = mysqli_query($connection, "SELECT boardgame FROM availableBoardGames");
+	while ($row = $sql->fetch_assoc()){
+	echo "<option value=\"boardgame\">" . $row['boardgame'] . "</option>";
+}
+?>
+</select>
+  <br>  
+  <li> Date Assigned: <input type="date" name="dateAssigned" id="dateAssigned" tabindex="4" title="Date Assigned" pattern="Date" placeholder="Please enter the date taken" size="60" maxlength=40></li><br>
+  <li> Notes: <input type="text" name="Notes" id="Notes" tabindex="5" title="Notes" pattern="[a-zA-Z0-9]+" placeholder="Please enter any notes about the Board-Game or the assignment" size="200" maxlength=200 ></li><br>
+  </ul>
+   </form>
+   <br>
+  <input type="submit" value="Submit"><br>
+  </fieldset>
+
+
+
+</body>
+</html>

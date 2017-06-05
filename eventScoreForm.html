@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+
+<title>eventScoreForm</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body>
+
+<form id="eventScoreForm" method="POST" onsubmit="phpEventScoreForm.php" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>
+
+ <fieldset>
+  <legend>Insert Event Scores</legend>
+  <ul>
+    <li> Member ID: <input type="text" name="memberID" id="memberID" tabindex="1" title="memberID" pattern="[a-zA-Z0-9]+" placeholder="Please enter members ID number" size="40" maxlength=30></li><br>
+    <li> Event Name: <input type="text" name="Event" id="Event" tabindex="2" title="Event" pattern="[a-zA-Z0-9]+" placeholder="Please enter the Event Name" size="40" maxlength=30 ></li><br>
+    <li> Members Score: <input type="int" name="Score" id="Score" tabindex="3" title="Score" pattern="[0-9]+" placeholder="Please enter members score" size="40" maxlength=10 ></li><br>
+  </ul>
+    </form>
+	<br>
+  <input type="submit" value="Submit"><br>
+
+  </fieldset>
+
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+/*CSS code for Board Games Forms */
+
+
+body{
+	font-family:Arial, sans-serif; /*body font*/
+	background: RGB(13,83,117); /*backround color*/
+}
+
+legend{
+font-weight:bold; /*Legend title font bold */
+color: #fff;  /*Legend title font color white */
+}
+	

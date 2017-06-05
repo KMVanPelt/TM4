@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+
+<title>availableBoardGamesForm</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body>
+
+<form id="availableBoardGamesForm" method="POST" onsubmit="phpAvailableBoardGamesForm.php" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>
+
+ <fieldset>
+  <legend>Insert Board-Games:</legend>
+  <ul>
+    <li> Member ID: <input type="text" name="memberID" id="memberID" tabindex="1" title="memberID" pattern="[a-zA-Z0-9]+" placeholder="Please enter members ID number" size="40" maxlength=20></li><br>
+    <li> Board-Game: <input type="text" name="boardgame" id="boardgame" tabindex="2" title="boardgame" pattern="[a-zA-Z0-9]+" placeholder="Please enter Board-Games name" size="40" maxlength=30></li><br>
+    <li> Notes: <input type="text" name="notes" id="notes" tabindex="3" title="notes" pattern="[a-zA-Z0-9]+" placeholder="Please enter notes about Board-Game" size="200" maxlength=200 ></li><br>
+  </ul>
+    </form>
+	<br>
+  <input type="submit" value="Submit"><br>
+
+  </fieldset>
+
+
+
+</body>
+</html>
